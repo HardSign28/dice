@@ -4,6 +4,28 @@ html {
 
 body {
   background-color: #f5f9fc;
+  font-size: 16px;
+}
+
+.alert {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  font-size: 18px;
+  width: calc(100% - 20px);
+}
+.alert .icon-emoji {
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 576px) {
+  .alert {
+    left: 50%;
+    width: auto;
+    min-width: 400px;
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 768px) {
@@ -43,6 +65,9 @@ body {
   height: 100px;
   margin: auto;
 }
+.dice-wrapper {
+  height: 100px;
+}
 .dice.dice-1 {
   background-image: url("../img/dice_one_icon.svg");
 }
@@ -60,6 +85,42 @@ body {
 }
 .dice.dice-6 {
   background-image: url("../img/dice_six_icon.svg");
+}
+
+.icon-emoji__success {
+  background-image: url("../img/emoji_success_icon.svg");
+}
+.icon-emoji__danger {
+  background-image: url("../img/emoji_danger_icon.svg");
+}
+.icon-emoji__warning {
+  background-image: url("../img/emoji_warning_icon.svg");
+}
+
+.modal-header {
+  border-bottom: none;
+  padding: 15px 1.5rem;
+  user-select: none;
+}
+.modal-body {
+  font-size: 24px;
+  font-weight: bold;
+}
+.modal-body .icon-emoji {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  margin: 15px auto;
+}
+.modal-body .title.success {
+  color: #00b87a;
+}
+.modal-body .title.danger {
+  color: #e62e5c;
+}
+.modal-footer {
+  border-top: none;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
